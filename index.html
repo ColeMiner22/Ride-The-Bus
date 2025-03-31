@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride The Bus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ride The Bus</h1>
+
+        <!-- Player Stats -->
+        <div id="player-stats" class="player-stats">
+            <h3>Player 1 Stats</h3>
+            <p>Wins: 0 | Losses: 0</p>
+            <p>Total Earnings: $0</p>
+            <p>Best Win: $0</p>
+        </div>
+
+        <!-- Betting Area -->
+        <div id="betting" class="game-section">
+            <h2>Place Your Bet</h2>
+            <div class="bet-box">
+                <label for="bet-amount">Bet Amount: </label>
+                <input type="number" id="bet-amount" class="bet-input" min="10" max="500" step="10" value="10" />
+            </div>
+            <button id="place-bet" class="btn">Place Bet</button>
+            <div class="balance-info">
+                <p>Coins: $<span id="coins">2000</span></p>
+                <p>Your Current Bet: $<span id="current-bet">0</span></p>
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <div id="game-area" class="game-section">
+            <h2 id="round-info">Round Info</h2>
+            <div id="timer" class="timer"></div>
+            <p id="message" class="message"></p>
+            
+            <!-- Card Display Area -->
+            <div class="card-area">
+                <div id="card-display"></div>
+                <div id="next-card-display"></div>
+            </div>
+
+            <!-- Card History -->
+            <div class="card-history">
+                <h3>Card History</h3>
+                <div id="card-history-display" class="card-history-grid"></div>
+            </div>
+
+            <!-- Game Controls -->
+            <div class="game-controls">
+                <div class="round-1-buttons">
+                    <button id="red-btn" class="btn">Red</button>
+                    <button id="black-btn" class="btn">Black</button>
+                </div>
+                <div class="round-2-buttons">
+                    <button id="higher-btn" class="btn">Higher</button>
+                    <button id="lower-btn" class="btn">Lower</button>
+                </div>
+                <div class="round-3-buttons">
+                    <button id="inside-btn" class="btn">Inside</button>
+                    <button id="outside-btn" class="btn">Outside</button>
+                </div>
+                <div class="round-4-buttons">
+                    <button id="hearts-btn" class="btn">Hearts</button>
+                    <button id="diamonds-btn" class="btn">Diamonds</button>
+                    <button id="clubs-btn" class="btn">Clubs</button>
+                    <button id="spades-btn" class="btn">Spades</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="cashout-btn" class="btn">Cash Out</button>
+                <button id="restart-btn" class="btn">Restart Game</button>
+            </div>
+        </div>
+
+        <!-- Rules and Payouts -->
+        <div id="rules" class="rules-section">
+            <h2>Game Rules & Payouts</h2>
+            <ul>
+                <li>
+                    <strong>Round 1: Red or Black</strong>
+                    <p>Guess if the card is Red or Black.</p>
+                    <span class="payout">Payout: 2x</span>
+                </li>
+                <li>
+                    <strong>Round 2: Higher or Lower</strong>
+                    <p>Guess if the next card is higher or lower.</p>
+                    <span class="payout">Payout: 3x</span>
+                </li>
+                <li>
+                    <strong>Round 3: Inside or Outside</strong>
+                    <p>Guess if the card's value is inside or outside the range of the previous card's value.</p>
+                    <span class="payout">Payout: 4x</span>
+                </li>
+                <li>
+                    <strong>Round 4: Pick the Suit</strong>
+                    <p>Guess the suit of the final card.</p>
+                    <span class="payout">Payout: 20x</span>
+                </li>
+            </ul>
+            <div class="game-tips">
+                <h3>Tips</h3>
+                <ul>
+                    <li>Each round gets more challenging but offers higher rewards!</li>
+                    <li>You can cash out at any time to secure your winnings.</li>
+                    <li>Watch the timer - you have 15 seconds for each round!</li>
+                    <li>Play with up to 4 players and compete for the highest earnings.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
